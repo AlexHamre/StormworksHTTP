@@ -1,0 +1,126 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+    <style>
+        body{
+    background: rgb(41, 41, 41);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.container{
+    max-width: 1100px;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.slider-wrapper{
+    position: relative;
+    margin: 1rem;
+}
+
+.slider{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 450px;
+    height: 40;
+    background-color: white;
+    border-radius: 25px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(82, 82, 255);
+}
+
+.slider::-moz-range-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(82, 82, 255);
+}
+
+.slider-wrapper span{
+    position: relative;
+    bottom: 50%;
+    transform: translateY(50%);
+    margin-left: 20px;
+    font-size: 2rem;
+    color: white;
+    display: block;
+}
+
+.vertical{
+    transform: rotate(-90deg) translateX(-20%);
+}
+.vertical span{
+    display: block;
+    transform: rotate(90deg) translateY(-200px);
+} 
+    </style>
+
+</head>
+<body>
+    <h1>Stormworks controller</h1>
+
+    <div class="container vertical">
+        <div class="slider-wrapper">
+            <input type="range" min="0" max="100" class="slider">
+            <span>50</span>
+        </div>
+
+        <br>
+
+        <div class="slider-wrapper">
+            <input type="range" min="0" max="100" class="slider">
+            <span>50</span>
+        </div>
+
+        <br>
+
+        <div class="slider-wrapper">
+            <input type="range" min="0" max="100" class="slider">
+            <span>50</span>
+        </div>
+
+        <br>
+
+        <div class="slider-wrapper">
+            <input type="range" min="0" max="100" class="slider">
+            <span>50</span>
+        </div>
+    </div>
+
+    
+    <script>
+        const sliders = document.querySelectorAll(".slider-wrapper");
+
+sliders.forEach(slider => {
+    slider.addEventListener("input", ()=>{
+        slider.lastElementChild.innerHTML = slider.firstElementChild.value
+    })
+});
+
+    </script>
+</body>
+</html>
