@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
       console.log("asked")
     }
     else{
-      res.sendFile(__dirname + '/bettercontrols/newer_controls.html');
+      res.sendFile(__dirname + '/controls.html');
     }
 });
 
