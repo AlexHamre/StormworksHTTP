@@ -10,4 +10,6 @@ Open localhost:3000 in a browser.
 Play around with the slider.
 You should see the value change in stormworks.
 
+for multiple sliders, make more lua blocks and change the number in "/?storm1" to match the slider-wrapper id
+
 Now customize it however you want
