@@ -1,15 +1,8 @@
-x = 19
 res = 0
 
 function onTick()
-	-- only requests data every 20 ticks
-	if x == 20 then
-		x = 0
-		async.httpGet(3000, "/?storm")
-		output.setNumber(1, res)
-	end
-	
-	x = x+1
+	async.httpGet(3000, "/?storm")
+	output.setNumber(1, res)
 end
 
 function httpReply(port, request_body, response_body)
