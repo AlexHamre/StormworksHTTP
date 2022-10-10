@@ -1,7 +1,7 @@
 res = 0
 
 function onTick()
-	async.httpGet(3000, "/?storm")
+	async.httpGet(3000, "/?storm1")
 	output.setNumber(1, res)
 end
 
