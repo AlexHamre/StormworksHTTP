@@ -1,6 +1,7 @@
 res = 0
 
 function onTick()
+	-- replace the 1 with whichever input you want
 	async.httpGet(3000, "/?storm1")
 	output.setNumber(1, res)
 end
