@@ -16,19 +16,28 @@ function keypress(event) {
   if (x == "w"){
     sliders[0].firstElementChild.value ++
     sliders[0].lastElementChild.innerHTML ++
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "/?val1="+ sliders[0].firstElementChild.value, true);
+    xhttp.send();
   }
   else if (x == "s"){
     sliders[0].firstElementChild.value --
     sliders[0].lastElementChild.innerHTML --
+    xhttp.open("GET", "/?val1="+ sliders[0].firstElementChild.value, true);
+    xhttp.send();
   }
 
   if (x == "a"){
     sliders[1].firstElementChild.value ++
     sliders[1].lastElementChild.innerHTML ++
+    xhttp.open("GET", "/?val1="+ sliders[1].firstElementChild.value, true);
+    xhttp.send();
   }
   else if (x == "d"){
     sliders[1].firstElementChild.value --
     sliders[1].lastElementChild.innerHTML --
+    xhttp.open("GET", "/?val1="+ sliders[1].firstElementChild.value, true);
+    xhttp.send();
   }
   }
 
