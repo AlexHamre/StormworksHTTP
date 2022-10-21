@@ -11,6 +11,27 @@ sliders.forEach(slider => {
     })
 });
 
+function keypress(event) {
+    var x = event.key;
+  if (x == "w"){
+    sliders[0].firstElementChild.value ++
+    sliders[0].lastElementChild.innerHTML ++
+  }
+  else if (x == "s"){
+    sliders[0].firstElementChild.value --
+    sliders[0].lastElementChild.innerHTML --
+  }
+
+  if (x == "a"){
+    sliders[1].firstElementChild.value ++
+    sliders[1].lastElementChild.innerHTML ++
+  }
+  else if (x == "d"){
+    sliders[1].firstElementChild.value --
+    sliders[1].lastElementChild.innerHTML --
+  }
+  }
+
 const buttons = document.getElementsByClassName("button")
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", buttonClickFunction)
